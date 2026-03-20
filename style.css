@@ -1,6 +1,6 @@
 * {
   text-align: center;
-  background-color: blue-slate;
+  background-color: var(--blue-slate);
 }
 .dotgothic16-regular {
   font-family: "DotGothic16", sans-serif;
