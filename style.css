@@ -1,6 +1,6 @@
 * {
   text-align: center;
-  background-color: var(--blue-slate);
+  background-color: #555b6eff;
 }
 .dotgothic16-regular {
   font-family: "DotGothic16", sans-serif;
@@ -9,6 +9,12 @@
 }
 body {
   font-family: DotGothic16;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #faf9f9ff;
+}
+p {
+  color: #faf9f9ff;
 }
 
 /* CSS HEX */
