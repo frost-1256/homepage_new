@@ -1,7 +1,20 @@
 * {
-  text-align: center;
   background-color: #555b6eff;
 }
+
+.header {
+  text-align: center;
+}
+
+.main {
+  text-align: left;
+  margin: 15px
+}
+
+.footer {
+  text-align: center;
+}
+
 .dotgothic16-regular {
   font-family: "DotGothic16", sans-serif;
   font-weight: 400;
