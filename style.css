@@ -37,7 +37,7 @@ p {
 }
 
 /* レスポンシブ */
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   h1 {
     font-size: 1.5rem;
   }
@@ -46,5 +46,8 @@ p {
 @media screen and (min-width: 601px) {
   h1 {
     font-size: 2rem;
+  }
+  .main {
+    margin-left: 15rem;
   }
 }
