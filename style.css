@@ -1,64 +1,55 @@
 * {
-  text-align: center;
   background-color: #555b6eff;
 }
-.dotgothic16-regular {
-  font-family: "DotGothic16", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+
 body {
-  font-family: DotGothic16;
+  font-family: "DotGothic16", sans-serif;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: #faf9f9ff;
 }
+
 p {
   color: #faf9f9ff;
 }
 
-/* CSS HEX */
---blue-slate: #555b6eff;
---muted-teal: #89b0aeff;
---frozen-water: #bee3dbff;
---bright-snow: #faf9f9ff;
---peach-fuzz: #ffd6baff;
+.header {
+  text-align: center;
+}
 
-/* CSS HSL */
---blue-slate: hsla(226, 13%, 38%, 1);
---muted-teal: hsla(177, 20%, 61%, 1);
---frozen-water: hsla(167, 40%, 82%, 1);
---bright-snow: hsla(0, 9%, 98%, 1);
---peach-fuzz: hsla(24, 100%, 86%, 1);
+.main {
+  text-align: left;
+}
 
-/* SCSS HEX */
-$blue-slate: #555b6eff;
-$muted-teal: #89b0aeff;
-$frozen-water: #bee3dbff;
-$bright-snow: #faf9f9ff;
-$peach-fuzz: #ffd6baff;
+.footer {
+  text-align: center;
+}
 
-/* SCSS HSL */
-$blue-slate: hsla(226, 13%, 38%, 1);
-$muted-teal: hsla(177, 20%, 61%, 1);
-$frozen-water: hsla(167, 40%, 82%, 1);
-$bright-snow: hsla(0, 9%, 98%, 1);
-$peach-fuzz: hsla(24, 100%, 86%, 1);
+/* カラー変数（CSS変数は:rootの中に書く） */
+:root {
+  --blue-slate: #555b6eff;
+  --muted-teal: #89b0aeff;
+  --frozen-water: #bee3dbff;
+  --bright-snow: #faf9f9ff;
+  --peach-fuzz: #ffd6baff;
+}
 
-/* SCSS RGB */
-$blue-slate: rgba(85, 91, 110, 1);
-$muted-teal: rgba(137, 176, 174, 1);
-$frozen-water: rgba(190, 227, 219, 1);
-$bright-snow: rgba(250, 249, 249, 1);
-$peach-fuzz: rgba(255, 214, 186, 1);
+/* レスポンシブ */
+@media screen and (min-width: 600px) {
+  .main {
+    margin: 15px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
 
-/* SCSS Gradient */
-$gradient-top: linear-gradient(0deg, #555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
-$gradient-right: linear-gradient(90deg, #555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
-$gradient-bottom: linear-gradient(180deg, #555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
-$gradient-left: linear-gradient(270deg, #555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
-$gradient-top-right: linear-gradient(45deg, #555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
-$gradient-bottom-right: linear-gradient(135deg, #555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
-$gradient-top-left: linear-gradient(225deg, #555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
-$gradient-bottom-left: linear-gradient(315deg, #555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
-$gradient-radial: radial-gradient(#555b6eff, #89b0aeff, #bee3dbff, #faf9f9ff, #ffd6baff);
+@media screen and (min-width: 601px) {
+  .main {
+    margin: 50px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
