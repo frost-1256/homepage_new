@@ -47,9 +47,10 @@ p {
   h1 {
     font-size: 2rem;
   }
-  .main {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 5%;  
+  .main { 
+    max-width: 960px;
+    margin-left: clamp(5rem, 30%, 50%);
+    margin-right: auto; /* 右は自動で余白 */
+    padding-left: clamp(0.5rem, 2vw, 1.5rem);
   }
 }
