@@ -27,6 +27,10 @@ p {
   text-align: center;
 }
 
+a {
+  color: #bee3dbff;
+}
+
 /* カラー変数（CSS変数は:rootの中に書く） */
 :root {
   --blue-slate: #555b6eff;
