@@ -1,8 +1,24 @@
-* {
-  background-color: #555b6eff;
+.background::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url('https://r2-media.spring-server.com/output.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  filter: blur(12px);
+
+  z-index: -1;
+
+  /* blurで端が見切れるの防止 */
+  transform: scale(1.05);
 }
 
 body {
+  margin: 0;
   font-family: "DotGothic16", sans-serif;
 }
 
