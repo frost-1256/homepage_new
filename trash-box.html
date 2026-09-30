@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>haru's portfolio</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap" rel="stylesheet">
+
+    <style>
+      h1 {
+        font-family: "Sora", sans-serif;
+        font-weight: 200 !important;
+        text-align: center;
+      }
+
+      * {
+        font-family: "Sora", sans-serif;
+        font-weight: 150 !important;
+        text-align: center;
+      }
+
+      section {
+        margin-block: 3rem;
+      }
+      
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <audio id="sound" preload="auto">
+      <source
+        src="https://www.myinstants.com/media/sounds/car-crash-and-siren.mp3"
+        type="audio/mpeg"
+      >
+    </audio>
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="container">
+        <h1>Trash-box</h1>
+      </section>
+      <section class="container">
+	<p>メインページには出すのは良くないようなもの、変なもの</p>
+	<a href="./index.html">戻る</a>
+      </section>
+      <section class="container">
+        <button id="hf">どこでもHyperflipボタン</button>
+      </section>
+      <script>
+        const button = document.getElementById("hf");
+        const sound = document.getElementById("sound");
+
+        button.addEventListener("click", () => {
+          sound.currentTime = 0;
+          sound.play();
+        });
+      </script>
+    </main>
+  </body>
+</html>
+
