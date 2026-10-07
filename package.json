@@ -1,0 +1,16 @@
+{
+  "name": "homepage-new",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev blog",
+    "docs:build": "vitepress build blog",
+    "build": "rm -rf dist && mkdir -p dist/blog && cp index.html trash-box.html style.css main.js 404.html dist/ && vitepress build blog",
+    "preview": "bun run build && wrangler dev",
+    "deploy": "bun run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "wrangler": "^3.114.0"
+  }
+}

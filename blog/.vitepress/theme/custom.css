@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* index.html 直書き <style> の再現: Sora・極細・全部中央寄せ */
+:root {
+  --vp-font-family-base: "Sora", sans-serif;
+  --vp-font-family-mono: "Sora", ui-monospace, monospace;
+}
+
+h1 {
+  font-family: "Sora", sans-serif;
+  font-weight: 200 !important;
+  text-align: center;
+}
+
+.VPNavBar,
+.VPHome,
+.VPDoc,
+.VPPage,
+.VPDocFooter {
+  font-family: "Sora", sans-serif;
+  font-weight: 200;
+  text-align: center;
+}
+
+/* markdown本文は section 相当の余白で */
+.VPDoc .vp-doc > div > *,
+.VPPage .vp-doc > div > * {
+  margin-block: 1.5rem;
+}
+
+/* 中央寄せの例外: コードと表は左寄せのまま読めるように */
+.VPDoc div[class*='language-'],
+.VPDoc table,
+.VPPage div[class*='language-'],
+.VPPage table {
+  text-align: left;
+}
+
+/* トップ(index.md)は body の flex 中央寄せっぽく縦に余白 */
+.VPHome .VPHome {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ブログらしい記事カードと記事ページ */
+.blog-top {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-size: 1.125rem;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 0;
+}
+
+.post-card {
+  margin-block: 2rem;
+}
+
+.post-date {
+  display: block;
+  opacity: 0.6;
+}
+
+.post-title {
+  font-size: 1.25rem;
+}
+
+.post-excerpt {
+  opacity: 0.8;
+}
+
+.blog-date {
+  opacity: 0.6;
+}
+
+.VPDoc .vp-doc {
+  max-width: 680px;
+  margin: 0 auto;
+}

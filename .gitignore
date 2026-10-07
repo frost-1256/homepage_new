@@ -1,3 +1,13 @@
 # main.js の難読化前ソース・生成スクリプト（コミットしない）
 main.src.js
 build.sh
+
+# bun / vitepress / workers
+node_modules
+dist
+blog/.vitepress/cache
+blog/.vitepress/dist
+.wrangler
+dev-dist
+*.log
+.direnv
