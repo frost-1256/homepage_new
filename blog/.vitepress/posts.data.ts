@@ -8,11 +8,12 @@ export interface Post {
 }
 
 // 日付持ちmd = 記事とみなして新しい順に
-export default createContentLoader('*.md', {
+// index.md は一覧ページ自体なので除外する
+export default createContentLoader(['*.md', '!index.md'], {
   excerpt: true,
   transform(raw): Post[] {
     return raw
-      .filter((p) => p.frontmatter.date)
+      .filter((p) => p.frontmatter.date && p.url !== '/')
       .map((p) => {
         const d = p.frontmatter.date
         const date =
@@ -26,6 +27,6 @@ export default createContentLoader('*.md', {
           excerpt: p.excerpt,
         }
       })
-      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
   },
 })
