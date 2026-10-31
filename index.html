@@ -27,6 +27,20 @@
       section {
         margin-block: 3rem;
       }
+
+      .projects ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .projects li {
+        list-style: none;
+        margin-block: 0.5rem;
+      }
+
+      .projects li::marker {
+        content: "";
+      }
       
       body {
         min-height: 100vh;
@@ -48,6 +62,12 @@
 	<p>Hello! I'm a 16-year-old student.</p>
 	<br>
 	<p>I like working with Linux, programming, and all kinds of technical stuff.<br>I’m into VRChat and system analysis too, and I also dabble in CTFs and OSINT.</p>
+      </section>
+      <section class="container projects">
+	<h4>Projects</h4>
+	<ul>
+		<li>[WIP] Spacewar WoA: run Mu-Silicium UEFI and Windows 11 on Nothing Phone 1 (Spacewar)</li>
+	</ul>
       </section>
       <section class="container">
 	<p>Links:</p>
