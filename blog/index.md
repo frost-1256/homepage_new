@@ -16,9 +16,8 @@ import { withBase } from 'vitepress'
 
   <ul v-else class="post-list">
     <li v-for="post of posts" :key="post.url" class="post-card">
+      <img v-if="post.thumbnail" :src="withBase(post.thumbnail)" alt="" class="post-thumb" loading="lazy" />
       <span class="post-date">{{ post.date }}</span>
-      <a :href="withBase(post.url)" class="post-title">{{ post.title }}</a>
-      <div v-if="post.excerpt" v-html="post.excerpt" class="post-excerpt"></div>
-    </li>
+      <a :href="withBase(post.url)" class="post-title">{{ post.title }}</a>    </li>
   </ul>
 </div>

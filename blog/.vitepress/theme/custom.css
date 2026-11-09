@@ -28,6 +28,11 @@ h1 {
   margin-block: 1.5rem;
 }
 
+/* 記事ページの本文は左寄せ(タイトルのh1は中央のまま) */
+.VPDoc .vp-doc {
+  text-align: left;
+}
+
 /* 中央寄せの例外: コードと表は左寄せのまま読めるように */
 .VPDoc div[class*='language-'],
 .VPDoc table,
@@ -56,23 +61,58 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 3rem 0 0;
+  display: grid;
+  gap: 1.25rem;
 }
 
 .post-card {
-  margin-block: 2rem;
+  position: relative;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.post-card {
+  overflow: hidden;
+}
+
+.post-thumb {
+  display: block;
+  width: calc(100% + 3rem);
+  max-width: none;
+  margin: -1.25rem -1.5rem 1rem;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
 }
 
 .post-date {
   display: block;
+  font-size: 0.8rem;
   opacity: 0.6;
+  margin-bottom: 0.25rem;
 }
 
 .post-title {
   font-size: 1.25rem;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-.post-excerpt {
-  opacity: 0.8;
+/* カード全体をクリック可能にする */
+.post-title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
 }
 
 .blog-date {
@@ -82,4 +122,13 @@ h1 {
 .VPDoc .vp-doc {
   max-width: 680px;
   margin: 0 auto;
+  padding-inline: clamp(2.5rem, 8vw, 5rem);
+  font-size: 1.125rem;
+  line-height: 1.9;
+}
+
+.VPDoc .vp-doc p,
+.VPDoc .vp-doc li {
+  font-size: 1.125rem;
+  line-height: 1.9;
 }
